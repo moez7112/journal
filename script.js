@@ -11,19 +11,60 @@ function getData() {
        console.log('Données récupérées du fichier JSON :', data);
        /// ON ECRIT LE CODE ICI ! 
       
-       let aticleprincipale = document.getElementById("manga.seinen")
-       console.log(articleprincipale);
+       let aticlePrincipaleContainer = document.getElementById("articleprincipale")
        
-       let date = data.date
+       let date = data.journal.articlePrincipal.date
        console.log(date);
 
-      let description = data.description
+      let description = data.journal.articlePrincipal.description
+      console.log(description);
+      
+       let image = data.journal.articlePrincipal.image
+       console.log(image);      
+       
+      let theme = data.journal.articlePrincipal.theme
+      console.log(theme);
+       
+      let titre = data.journal.articlePrincipal.titre
+      console.log(titre);
+      
 
-       let image
+       articleprincipale.innerHTML = `<h2>${titre}</h2>
+                                       <p>${description}</p>
+                          <p><b>date</b>: ${date}</p>
+                         <p><b>Thème</b>: ${theme}</p>
+                                <img src="${image}" alt "image article">` ;  
+
+
+ let aticles = document.getElementById("articles")
+
+       date = data.journal.articles.date
+       console.log(date);
+    
+        image = data.journal.articles.image 
+       console.log(image);      
        
-      let theme
+       theme = data.journal.articles.theme
+      console.log(theme);
        
-      let titre
+       titre = data.journal.articles.titre
+       console.log(titre);
+       
+articles.innerHTML =     `<h2>${titre}</h2> 
+              <p><b>date</b>: ${date}</p>
+             <p><b>Theme</b>: ${theme}</p>
+                    <img src="${image}" alt "image">`;          
+
+
+
+date = 
+
+
+
+
+
+
+
 
        /// FIN DU CODE
      })

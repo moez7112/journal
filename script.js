@@ -55,11 +55,24 @@ articles.innerHTML =     `<h2>${titre}</h2>
              <p><b>Theme</b>: ${theme}</p>
                     <img src="${image}" alt "image">`;          
 
+let article = document.getElementById("article")
 
+ date = data.journal.articles.date
+       console.log(date);
+    
+        image = data.journal.articles.image 
+       console.log(image);      
+       
+       theme = data.journal.articles.theme
+      console.log(theme);
 
-date = 
+titre = data.journal.articlces.titre
+       console.log(titre);
 
-
+article.innerHTML =      `<h2>${titre}</h2> 
+              <p><b>date</b>: ${date}</p>
+             <p><b>Theme</b>: ${theme}</p>
+                    <img src="${image}" alt "image">`;
 
 
 
